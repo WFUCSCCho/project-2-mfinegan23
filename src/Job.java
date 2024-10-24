@@ -1,6 +1,6 @@
 /***********************************************************************
  ∗ @file: Job.java
- ∗ @description: This program implements the Job class with Comparable interface.
+ ∗ @description: This program implements the Job class with Comparable interface. Gets data from jobs_in_data.csv, which is from Kaggle
  ∗ @author: Max Finegan
  ∗ @date: September 24 , 2024
  ***********************************************************************/

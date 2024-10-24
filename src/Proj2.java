@@ -2,7 +2,7 @@
  * @file: Proj2.java
  * @description: This program reads Job data from a file, processes it,
  *               and performs insertion and search operations on BSTs and AVL trees.
- *               It measures and records the time taken for these operations.
+ *               It measures and records the time taken for these operations in the console and CSV format.
  * @author: Max Finegan
  * @date: October 23, 2024
  ******************************************************************************/
@@ -88,12 +88,12 @@ public class Proj2 {
         }
 
         // Sort the ArrayList
-        Collections.sort(jobs);
-        ArrayList<Job> sortedJobs = jobs;
+        ArrayList<Job> sortedJobs = new ArrayList<>(jobs);
+        Collections.sort(sortedJobs);
 
         // Shuffle the ArrayList
-        Collections.shuffle(jobs);
-        ArrayList<Job> shuffledJobs = jobs;
+        ArrayList<Job> shuffledJobs = new ArrayList<>(jobs);
+        Collections.shuffle(shuffledJobs);
 
         // Declare and initialize the sorted BST
         BST<Job> mybstSorted = new BST<>();
@@ -108,16 +108,17 @@ public class Proj2 {
         long endTime;
 
         // Insert
-        double elapsedMillis_SortedBST_Insert;
-        double elapsedMillis_ShuffledBST_Insert;
-        double elapsedMillis_SortedAVL_Insert;
-        double elapsedMillis_ShuffledAVL_Insert;
+        double elapsedSeconds_SortedBST_Insert;
+        double elapsedMilis_SortedBST_Insert;
+        double elapsedSeconds_ShuffledBST_Insert;
+        double elapsedSeconds_SortedAVL_Insert;
+        double elapsedSeconds_ShuffledAVL_Insert;
 
-        //Search
-        double elapsedMillis_SortedBST_Search;
-        double elapsedMillis_ShuffledBST_Search;
-        double elapsedMillis_SortedAVL_Search;
-        double elapsedMillis_ShuffledAVL_Search;
+        // Search
+        double elapsedSeconds_SortedBST_Search;
+        double elapsedSeconds_ShuffledBST_Search;
+        double elapsedSeconds_SortedAVL_Search;
+        double elapsedSeconds_ShuffledAVL_Search;
 
 
         // Do the inserts
@@ -132,8 +133,8 @@ public class Proj2 {
             mybstSorted.insert(sortedJobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_SortedBST_Insert = (endTime - startTime) / 1e6;
-        System.out.println("-----Sorted BST of " + numLines + " lines takes " + elapsedMillis_SortedBST_Insert + " milliseconds to insert all nodes.-----");
+        elapsedSeconds_SortedBST_Insert = (endTime - startTime) / 1_000_000_000.0; // divide to get time in seconds
+        System.out.println("-----Sorted BST of " + numLines + " lines takes " + elapsedSeconds_SortedBST_Insert + " seconds to insert all nodes.-----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
 
@@ -143,8 +144,8 @@ public class Proj2 {
             mybstShuffled.insert(shuffledJobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_ShuffledBST_Insert = (endTime - startTime) / 1_000_000.0;
-        System.out.println("----Shuffled BST of " + numLines + " lines takes " + elapsedMillis_ShuffledBST_Insert + " milliseconds to insert all nodes.----");
+        elapsedSeconds_ShuffledBST_Insert = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("----Shuffled BST of " + numLines + " lines takes " + elapsedSeconds_ShuffledBST_Insert + " seconds to insert all nodes.----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
 
@@ -154,8 +155,8 @@ public class Proj2 {
             myavlSorted.insert(sortedJobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_SortedAVL_Insert = (endTime - startTime) / 1_000_000.0;
-        System.out.println("-----Sorted AVL Tree of " + numLines + " lines takes " + elapsedMillis_SortedAVL_Insert + " milliseconds to insert all nodes.-----");
+        elapsedSeconds_SortedAVL_Insert = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("-----Sorted AVL Tree of " + numLines + " lines takes " + elapsedSeconds_SortedAVL_Insert + " seconds to insert all nodes.-----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
         // Insert data into myavlShuffled
@@ -164,8 +165,8 @@ public class Proj2 {
             myavlShuffled.insert(shuffledJobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_ShuffledAVL_Insert = (endTime - startTime) / 1_000_000.0;
-        System.out.println("----Shuffled AVL Tree of " + numLines + " lines takes " + elapsedMillis_ShuffledAVL_Insert + " milliseconds to insert all nodes.----");
+        elapsedSeconds_ShuffledAVL_Insert = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("----Shuffled AVL Tree of " + numLines + " lines takes " + elapsedSeconds_ShuffledAVL_Insert + " seconds to insert all nodes.----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
 
@@ -182,8 +183,8 @@ public class Proj2 {
             mybstSorted.search(jobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_SortedBST_Search = (endTime - startTime) / 1_000_000.0;
-        System.out.println("-----Sorted BST of " + numLines + " lines takes " + elapsedMillis_SortedBST_Search + " milliseconds to search all nodes.-----");
+        elapsedSeconds_SortedBST_Search = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("-----Sorted BST of " + numLines + " lines takes " + elapsedSeconds_SortedBST_Search + " seconds to search all nodes.-----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
 
@@ -193,8 +194,8 @@ public class Proj2 {
             mybstShuffled.search(jobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_ShuffledBST_Search = (endTime - startTime) / 1_000_000.0;
-        System.out.println("----Shuffled BST of " + numLines + " lines takes " + elapsedMillis_ShuffledBST_Search + " milliseconds to search all nodes.----");
+        elapsedSeconds_ShuffledBST_Search = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("----Shuffled BST of " + numLines + " lines takes " + elapsedSeconds_ShuffledBST_Search + " seconds to search all nodes.----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
 
@@ -204,8 +205,8 @@ public class Proj2 {
             myavlSorted.contains(jobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_SortedAVL_Search = (endTime - startTime) / 1_000_000.0;
-        System.out.println("-----Sorted AVL Tree of " + numLines + " lines takes " + elapsedMillis_SortedAVL_Search + " milliseconds to search all nodes.-----");
+        elapsedSeconds_SortedAVL_Search = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("-----Sorted AVL Tree of " + numLines + " lines takes " + elapsedSeconds_SortedAVL_Search + " seconds to search all nodes.-----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
 
@@ -215,16 +216,18 @@ public class Proj2 {
             myavlShuffled.contains(jobs.get(i));
         }
         endTime = System.nanoTime();
-        elapsedMillis_ShuffledAVL_Search = (endTime - startTime) / 1_000_000.0;
-        System.out.println("----Shuffled AVL Tree of " + numLines + " lines takes " + elapsedMillis_ShuffledAVL_Search + " milliseconds to search all nodes.----");
+        elapsedSeconds_ShuffledAVL_Search = (endTime - startTime) / 1_000_000_000.0;
+        System.out.println("----Shuffled AVL Tree of " + numLines + " lines takes " + elapsedSeconds_ShuffledAVL_Search + " seconds to search all nodes.----");
         System.out.println("---------------------------------------------------------------------------------------------------------");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
         // Write the results to the output.txt file
-        writeToFile( numLines + ", " + elapsedMillis_SortedBST_Insert + ", " + elapsedMillis_ShuffledBST_Insert + ", " +
-                elapsedMillis_SortedAVL_Insert + ", " + elapsedMillis_ShuffledAVL_Insert + ", " + elapsedMillis_SortedBST_Search + ", " +
-                elapsedMillis_ShuffledBST_Search + ", " + elapsedMillis_SortedAVL_Search + ", " + elapsedMillis_ShuffledAVL_Insert + "\n", "./src/output.txt");
+        writeToFile(numLines + ", " + elapsedSeconds_SortedBST_Insert + ", " + elapsedSeconds_ShuffledBST_Insert + ", " +
+                elapsedSeconds_SortedAVL_Insert + ", " + elapsedSeconds_ShuffledAVL_Insert + ", " + elapsedSeconds_SortedBST_Search + ", " +
+                elapsedSeconds_ShuffledBST_Search + ", " + elapsedSeconds_SortedAVL_Search + ", " + elapsedSeconds_ShuffledAVL_Search + "\n", "./src/output.txt");
 
+        //System.out.println(sortedJobs);
+        //System.out.println(shuffledJobs);
 
     }
 
