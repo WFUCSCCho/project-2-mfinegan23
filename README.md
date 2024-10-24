@@ -68,14 +68,16 @@ BST vs. AVL Tree running time (insertion):
 (insert here)
 
 
-<img width="602" alt="Screenshot 2024-10-23 at 7 53 07 PM" src="https://github.com/user-attachments/assets/7dcfb058-0faa-4331-8bc0-f2dbed5d2913">
+<img width="603" alt="Screenshot 2024-10-23 at 10 46 21 PM" src="https://github.com/user-attachments/assets/764aa4e7-0a1e-4ea2-85f9-750160447694">
+
 
 
 BST vs. AVL Tree running time (search):
 (insert here)
 
 
-<img width="602" alt="Screenshot 2024-10-23 at 7 54 13 PM" src="https://github.com/user-attachments/assets/06bf351a-4df3-4a10-beeb-3bd3b912485e">
+<img width="603" alt="Screenshot 2024-10-23 at 10 47 06 PM" src="https://github.com/user-attachments/assets/a20bfc01-bf2b-4dcd-b257-0fee04b35532">
+
 
 
 
@@ -83,7 +85,8 @@ BST vs. AVL Tree running rate (insertion):
 (insert here)
 
 
-<img width="660" alt="Screenshot 2024-10-23 at 7 54 49 PM" src="https://github.com/user-attachments/assets/467cab2f-2c1f-4ff4-a167-69f00b77ec08">
+<img width="603" alt="Screenshot 2024-10-23 at 10 47 24 PM" src="https://github.com/user-attachments/assets/1baadc64-c060-4aa3-9853-b48470929cb3">
+
 
 
 
@@ -91,7 +94,8 @@ BST vs. AVL Tree running rate (search):
 (insert here)
 
 
-<img width="601" alt="Screenshot 2024-10-23 at 7 55 07 PM" src="https://github.com/user-attachments/assets/360bc08f-9871-4e6b-9f2c-8bf283040c71">
+<img width="603" alt="Screenshot 2024-10-23 at 10 47 41 PM" src="https://github.com/user-attachments/assets/e0cd003c-db17-449b-8847-36e3a2ce701d">
+
 
 
 
