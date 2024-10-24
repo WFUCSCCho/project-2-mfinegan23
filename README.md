@@ -67,14 +67,37 @@ Using your favorite graphing software (e.g., MS Excel or Google Sheets), plot th
 BST vs. AVL Tree running time (insertion):
 (insert here)
 
+
+<img width="603" alt="Screenshot 2024-10-23 at 10 46 21 PM" src="https://github.com/user-attachments/assets/764aa4e7-0a1e-4ea2-85f9-750160447694">
+
+
+
 BST vs. AVL Tree running time (search):
 (insert here)
+
+
+<img width="603" alt="Screenshot 2024-10-23 at 10 47 06 PM" src="https://github.com/user-attachments/assets/a20bfc01-bf2b-4dcd-b257-0fee04b35532">
+
+
+
 
 BST vs. AVL Tree running rate (insertion):
 (insert here)
 
+
+<img width="603" alt="Screenshot 2024-10-23 at 10 47 24 PM" src="https://github.com/user-attachments/assets/1baadc64-c060-4aa3-9853-b48470929cb3">
+
+
+
+
 BST vs. AVL Tree running rate (search):
 (insert here)
+
+
+<img width="603" alt="Screenshot 2024-10-23 at 10 47 41 PM" src="https://github.com/user-attachments/assets/e0cd003c-db17-449b-8847-36e3a2ce701d">
+
+
+
 
 ## Submission:
 
